@@ -1142,11 +1142,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tyler\\OneDrive\\Desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+      "projectUniqueName": "C:\\Users\\tyler\\desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
       "projectName": "EmployeeAPI",
-      "projectPath": "C:\\Users\\tyler\\OneDrive\\Desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+      "projectPath": "C:\\Users\\tyler\\desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
       "packagesPath": "C:\\Users\\tyler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tyler\\OneDrive\\Desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\obj\\",
+      "outputPath": "C:\\Users\\tyler\\desktop\\SimpleAPI\\EmployeeAPI\\EmployeeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",

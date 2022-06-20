@@ -1,11 +1,6 @@
 ﻿
-using System;
 using Npgsql;
-using System.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-
-
 
 
 namespace EmployeeAPI.Controllers
@@ -46,22 +41,6 @@ namespace EmployeeAPI.Controllers
                 return BadRequest(es.Message);
             }
         }
-
-
-        //[Route("updateEmployee")]
-        //[HttpPut]
-
-        //public IActionResult UpdateEmployee(AddEmpModel updEmp)
-        //{
-        //    try
-        //    {
-        //        return Accepted("", newEmpObj.UpdateEmployee(updEmp));
-        //    }
-        //    catch (System.Exception es)
-        //    {
-        //        return BadRequest(es.Message);
-        //    }
-        //}
 
         [Route("DeleteEmployee")]
         [HttpDelete]

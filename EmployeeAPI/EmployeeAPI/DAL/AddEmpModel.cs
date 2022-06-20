@@ -12,10 +12,6 @@ namespace EmployeeAPI
 
         public string email { get; set; }
 
-      
-
-
-
         NpgsqlConnection constring = new NpgsqlConnection("Server=localhost;Port=5432;Database=employee;User Id=postgres;Password=Bark9631!;");
 
         public string AddEmployee(AddEmpModel newEmp)
@@ -64,8 +60,6 @@ namespace EmployeeAPI
 
             return "Updated Employee";
         }
-
-
 
     }
 
