@@ -14,14 +14,18 @@ namespace EmployeeAPI2.Controllers
         {
             return View();
         }
-
+        #region Employee List
+        //Gets the entire employee list
         [Route("EmployeeList")]
         [HttpGet]
         public async Task<ActionResult<List<NewEmp>>> Get()
         {
             return Ok(await _context.Employee.ToListAsync());
         }
+        #endregion
 
+        #region Get a Single Employee
+        //Will pull a single employee
         [Route("SingleEmployee")]
         [HttpGet]
         public async Task<ActionResult<List<NewEmp>>> Get(int id)
@@ -33,5 +37,6 @@ namespace EmployeeAPI2.Controllers
             }
             return Ok(employee);
         }
+        #endregion
     }
 }
