@@ -1,5 +1,6 @@
-global using EmployeeAPI2.DAL;
+global using EmployeeAPI2.Controllers;
 global using Microsoft.EntityFrameworkCore;
+using DAL.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 

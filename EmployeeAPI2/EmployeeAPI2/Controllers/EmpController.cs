@@ -1,15 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using DAL.Entities;
+using Microsoft.AspNetCore.Mvc;
 using System.Data.Entity;
+
 
 namespace EmployeeAPI2.Controllers
 {
     public class EmpController : Controller
     {
 
-        private readonly DataContext _context;
-        public EmpController(DataContext context)
+        private readonly BLL.EmployeeBLL _BLL;
+        public EmpController()
         {
-            _context = context;
+            _BLL = new BLL.EmployeeBLL();
         }
 
         public IActionResult Index()
@@ -20,11 +23,9 @@ namespace EmployeeAPI2.Controllers
         //Adds new Employees
         [Route("AddEmployee")]
         [HttpPost] 
-        public async Task<ActionResult<List<NewEmp>>> AddEmp(NewEmp emp)
+        public Task<ActionResult<List<NewEmp>>> AddEmp()
         {
-            _context.Employee.Add(emp);
-            await _context.SaveChangesAsync();
-            return Ok(await _context.Employee.ToListAsync());
+            return _BLL.AddEmp();
         }
         #endregion
 
@@ -33,17 +34,9 @@ namespace EmployeeAPI2.Controllers
         [Route("DeleteEmployee")]   
         [HttpDelete]
 
-        public async Task<ActionResult<List<NewEmp>>> DeleteEmp(int id)
+        public Task<ActionResult<List<NewEmp>>> DeleteEmp(int id)
         {
-            var employee = await _context.Employee.FindAsync(id);
-            
-            if(employee == null)
-            {
-                return BadRequest("Employee Does Not Exist In Database");
-            }
-            _context.Employee.Remove(employee);
-            await _context.SaveChangesAsync();
-            return Ok(await _context.Employee.ToListAsync());
+            return _BLL.DeleteEmp();
         }
         #endregion
     }
