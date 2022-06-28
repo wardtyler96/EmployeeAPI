@@ -16,9 +16,8 @@ namespace DAL
         {
             
             var db = new DataContext();
-            NewEmp id2 = new NewEmp();
 
-            id2 = db.Employee.Find(x => x.empId == id);
+           var id2 = db.Find(x => x.empId == id);
 
             return id2;
         }

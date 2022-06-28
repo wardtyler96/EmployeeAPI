@@ -2,6 +2,7 @@ global using EmployeeAPI2.Controllers;
 global using Microsoft.EntityFrameworkCore;
 using DAL.Entities;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

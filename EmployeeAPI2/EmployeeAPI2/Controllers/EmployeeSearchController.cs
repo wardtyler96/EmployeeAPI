@@ -20,7 +20,7 @@ namespace EmployeeAPI2.Controllers
         //Gets the entire employee list
         [Route("EmployeeList")]
         [HttpGet]
-        public Task<ActionResult<List<NewEmp>>> GetEmployeeList()
+        public  List<NewEmp> GetEmployeeList()
         {
             return _BLL.GetEmployeeList();
         }
@@ -30,9 +30,9 @@ namespace EmployeeAPI2.Controllers
         //Will pull a single employee
         [Route("SingleEmployee")]
         [HttpGet]
-        public Task<ActionResult<List<NewEmp>>> Get(int id)
+        public NewEmp GetEmployeeById(int id)
         {
-            return _BLL.GetEmployeeById();
+            return _BLL.GetEmployeeById(id);
         }
         #endregion
     }

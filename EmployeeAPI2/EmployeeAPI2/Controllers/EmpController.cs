@@ -23,9 +23,9 @@ namespace EmployeeAPI2.Controllers
         //Adds new Employees
         [Route("AddEmployee")]
         [HttpPost] 
-        public Task<ActionResult<List<NewEmp>>> AddEmp()
+        public string AddEmp(NewEmp emp)
         {
-            return _BLL.AddEmp();
+            return _BLL.AddEmp(emp);
         }
         #endregion
 
@@ -33,10 +33,9 @@ namespace EmployeeAPI2.Controllers
         //Deletes Employees
         [Route("DeleteEmployee")]   
         [HttpDelete]
-
-        public Task<ActionResult<List<NewEmp>>> DeleteEmp(int id)
+        public string DeleteEmp(int id)
         {
-            return _BLL.DeleteEmp();
+            return _BLL.DeleteEmp(id);
         }
         #endregion
     }
